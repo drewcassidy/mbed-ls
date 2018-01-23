@@ -339,7 +339,7 @@ class MbedLsToolsBase(object):
         @details Ordered by target id (key: target_id).
         """
         result = {}
-        mbed_list = self.list_mbeds_ext()
+        mbed_list = self.list_mbeds(unique_names=True, read_details_txt=True)
         for mbed in mbed_list:
             target_id = mbed['target_id']
             result[target_id] = mbed
